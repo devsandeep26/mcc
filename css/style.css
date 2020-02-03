@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+.navbar-trans {
+	background: transparent !important;
+}
+
+.img-logo {
+	width: 65px;
+}
+
+
+html,
+body {
+	height: 100%;
+}
+
+.first {
+	height: 100vh;
+	min-height: 400px;
+	background-size: cover;
+	background-image: url(../images/WEBSITE.gif);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.nav-link {
+	padding-right: 2rem !important;
+	color: #f5f5f5 !important;
+	font-weight: 500;
+	font-size: .9rem;
+	text-transform: uppercase;
+}
+
+.nav-link:hover {
+	color: #FACC52 !important;
+}
+
+.btn-registration {
+	color: tomato !important;
+	text-transform: uppercase;
+}
+
+/* section {
+	height: calc(90% - 50px);
+	height: 90vh;
+} */
