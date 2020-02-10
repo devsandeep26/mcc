@@ -6,6 +6,8 @@
    <!-- Meta tag Keywords -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta charset="utf-8">
+   <link rel="shortcut icon" href="./images/MCC PRODUCTIONS NEW LOGO 2.png" type="image/x-icon">
+
    <!--// Meta tag Keywords -->
    <!-- css files -->
    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
@@ -21,6 +23,10 @@
    <!-- //web-fonts -->
    <!-- //css files -->
    <link rel="stylesheet" href="css/style.css" type="text/css">
+   <!-- <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet"> -->
+         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 </head>
 
 <body class="grey-bg">
@@ -37,7 +43,9 @@
       <div class="container">
          <div class="row contact-grids">
             <div class="offset-md-2 col-md-8">
-               <?php include('server.php'); ?>
+            
+                <?php include('server.php'); ?>
+           
                <?php include('errors.php');  ?>
                <form action="contact.php" method="POST" enctype="multipart/form-data">
                   <div class="form-row">
@@ -49,7 +57,12 @@
                   <div class="form-row">
                      <div class="form-group col-md-6">
                         <label for="inputDateOfBirth">Date Of Birth</label>
-                        <input type="date" class="form-control" id="inputDateOfBirth"  name="dateofbirth" value="<?php echo $dateofbirth; ?>">
+                        <!-- <input type="date" class="form-control datetime" id="inputDateOfBirth"  name="dateofbirth" value="<?php echo $dateofbirth; ?>"> -->
+                        <!-- <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy"> -->
+                           <!-- <input type="date" class="form-control date"name="dateofbirth" id="dateogbirth" min="1995-01-01" max="2002-02-07"> -->
+                           <input type = "text" class="form-control" name="dateofbirth" placeholder="Enter Date of Birth" id = "datepicker-1">
+
+                        
                      </div>
                   </div>
                   <div class="form-group">
@@ -204,6 +217,56 @@
                         words</label>
                      <textarea class="form-control" id="inputPagentInput" rows="3" name="benefitdesc" placeholder="Type Here..." value="<?php echo $benefitdesc; ?>"></textarea>
                   </div>
+                  <div class="form-group text-white border pl-2">
+                     <p>
+                       <h5> Please Send the money to the below Bank Details</h5>
+                        <table>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    Company Name 
+                                 </td>
+                                 <td>
+                                    : Mcc Production
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Bank Name
+                                 </td>
+                                 <td>
+                                    : AAAAACCBBNNNHH Bank
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Account Number&nbsp; 
+                                 </td>
+                                 <td>
+                                    : XXXXXX-XXXXXXX
+                                 </td>
+                               
+                              </tr>
+                              <tr>
+                              <td>
+                                    IFSC Code
+                                 </td>
+                                 <td>
+                                    : XXX-XXXXX
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    Note
+                                 </td>
+                                 <td>
+                                 : Please check the bank number before sending.
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </p>
+                  </div>
                   <div class="form-group">
                      <label for="inputPagentInput">Terms and Conditions</label>
                      <div class="terms">
@@ -301,13 +364,28 @@
    <!-- //footer -->
    <!-- js-scripts -->
    <!-- js -->
+
    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+   <script src="./js/jquery-2.2.3.min.js"></script>
+   <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
    <!-- <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
          crossorigin="anonymous"></script> -->
    <script src="js/bootstrap.js"></script>
    <!-- //js -->
    <!-- navigation  -->
    <script src="js/main.js"></script>
+   <script>
+         $(function() {
+            $( "#datepicker-1" ).datepicker({
+               changeMonth:true,
+               changeYear:true,
+               minDate: '-34Y',maxDate:'-18Y',
+               yearRange: "-34:-18"
+            });
+            
+         });
+      </script>
    <!-- //navigation -->
    <!-- //js-scripts -->
 </body>

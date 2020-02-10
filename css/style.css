@@ -14,9 +14,8 @@
 }
 
 .img-about {
-	width: 70%;
-	position: relative;
-	top: 20%;
+	width: 35%;
+	
 }
 
 
@@ -29,9 +28,12 @@ body {
 .first {
 	height: 100%;
 	min-height: 400px;
+	
 	background-size: cover;
-	background-image: url(../images/WEBSITE.gif);
+	background-position: center;
 	background-repeat: no-repeat;
+	/* background-image: url(../images/WEBSITE.gif); */
+
 }
 
 .nav-link {
@@ -196,6 +198,33 @@ h3.heading {
 font-size: 1.3rem;
 font-weight: 500;
 }
+
+/* highlights */
+#highlights li p{
+	margin-left:30px;
+	
+}
+#highlights li span i{
+	position: relative;
+	float: left;
+	
+}
+/* amazing */
+#amazing li p{
+	margin-left:30px;
+	
+}
+#amazing li h4{
+	margin-left:30px;
+	
+}
+#amazing li span i{
+	position: relative;
+	float: left;
+	
+}
+
+
 /*footer*/
 .footer {
 	background: #181818;
@@ -347,11 +376,32 @@ font-weight: 500;
 	height: 90vh;
 } */
 
+.content-outer{
+	display:flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+.content-inner{
+
+	text-align: center;
+}
+
+
+/* divider */
+.divider{
+	border: 1px solid #6f2525;
+}
+
+
 
 /* media screen */
 
 
 @media screen and (min-width: 320px) and (max-width:480px) {
+	.navbar-light .navbar-brand{
+		width:20%;
+	}
 	.footer-logo h3 span{
 		width: 90%;
 	}
@@ -362,4 +412,55 @@ font-weight: 500;
 		display: none;
 	}
 	
+	.first{
+		background-image: url(../images/WEBSITE\ BG-EMPTY.gif);
+		height: 100vh;
+	}
+	#about-us .img-about{
+		width: 35%;
+	}
+	#about-us h3,p{
+		font-size: .9rem!important;
+		margin-bottom: .5rem;
+	}
+	#about-us .heading{
+		letter-spacing: .1rem;
+	}
+	#highlights .heading{
+		letter-spacing: .1rem;
+	}
+	#highlights h3,p{
+		font-size: .9rem!important;
+		margin-bottom: .9rem;
+	}
+	#amazing h4,h3,p{
+		font-size: .9rem!important;
+		margin-bottom: .9rem;
+	}
+	#amazing .heading{
+		letter-spacing: .06rem;
+	}
+	
 }
+
+@media screen and (min-width: 490px)  {
+	.first{
+		background-image: url(../images/WEBSITE\ BG-EMPTY.gif);
+		height: 100vh;
+	}
+
+	.first .content-inner img:nth-child(1){
+		margin-top: 20%;
+		width: 20%;
+		display: block;
+		margin: 0 auto;
+	}
+	.first .content-inner img:nth-child(2){
+		width: 60%;
+	}
+}
+
+
+
+
+/* temporary */

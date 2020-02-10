@@ -1,8 +1,9 @@
 <?php
 
 // connect to a database
-
-$db = mysqli_connect('localhost', 'root', '', 'FashionShow');
+$razpay_key = "rzp_test_d1UzT2HabyA2SJ";
+$razpay_secret="A4YLbBNkavxH0kVzEPSlTflz";
+$db = mysqli_connect('localhost', 'admin', 'admin', 'fashionshow1');
 
 $firstname = "";   
 $dateofbirth = "";
@@ -99,9 +100,9 @@ if (isset($_POST['register'])) {
     $mail->Port = 587;
     $mail->Username = "contact@mccproductions.in";
     $mail->Password = "akshay@99";
-    $mail->SetFrom("contact@mccproductions.in");
+    $mail->SetFrom("no-reply@mccproductions.in");
     $mail->AddAddress("contact@mccproductions.in");
-    $mail->Subject = "Application For Event";
+    $mail->Subject = $firstname." Application For Event ";
     $mail->isHTML(true);
     $mail->Body = '<html>
             <head>
@@ -226,7 +227,10 @@ if (isset($_POST['register'])) {
       echo "Mailer Error: " . $mail->ErrorInfo;
     } else { ?>
       <div class="success">
-        <p><?php echo "<h1 classs='alert alert-sucess'>Message has been sent</h1>"; ?></p>
+        <p><?php echo '<h5 class="text-center alert alert-success">
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+               </button> </h5>'; ?></p>
       </div>
 
       <?php }
